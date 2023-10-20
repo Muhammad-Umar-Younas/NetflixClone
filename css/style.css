@@ -1,0 +1,334 @@
+/* Global Styles */
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	
+	background: #000;
+	color: #999;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p {
+	margin: 0.5rem 0;
+    color: white;
+}
+
+img {
+	width: 100%;
+}
+
+/* Buttons */
+.btn {
+	display: inline-block;
+	background: var(--primary-color);
+	color: #fff;
+	padding: 0.4rem 1.3rem;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin-right: 0.5rem;
+	transition: opacity 0.2s ease-in;
+	outline: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+	border-radius: 2px;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn-rounded {
+	border-radius: 5px;
+}
+
+.btn-xl {
+	font-size: 2rem;
+	padding: 1.5rem 2.1rem;
+	text-transform: uppercase;
+}
+
+.btn-lg {
+	font-size: 1rem;
+	padding: 0.8rem 1.3rem;
+	text-transform: uppercase;
+}
+
+.btn-icon {
+	margin-left: 1rem;
+}
+
+/* showcase section styling */
+
+.showcase {
+	width: 100%;
+	height: 93vh;
+	position: relative;
+	background: url('/images/showcasebgg.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.6);
+	
+}
+
+.showcase-top {
+	position: relative;
+	z-index: 2;
+	height: 90px;
+}
+
+.showcase-top img {
+	width: 170px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 0;
+}
+
+.showcase-top a {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+	position: relative;
+	z-index: 2;
+	width: 65%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 9rem;
+}
+
+.showcase-content h1 {
+	font-weight: 700;
+	font-size: 5.2rem;
+	line-height: 1.1;
+	margin: 0 0 2rem;
+}
+
+.showcase-content p {
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.9rem;
+	line-height: 1.25;
+	margin: 0 0 2rem;
+}
+.tv{
+    min-height: 80vh;
+}
+.tv .left{
+    width: 48%;
+    float: left;
+    margin-top: 10rem;
+    text-align: center;
+}
+.tv .left h1{
+font-size: 3rem;
+margin-bottom: 1rem;
+}
+.tv .left p{
+    font-size: 1.5rem;
+}
+.tv .right{
+    width: 48%;
+    float: right;
+    margin-right: 1rem;
+}
+
+/* mobile section  */
+
+
+.mobile{
+    min-height: 80vh; 
+}
+.mobile .left{
+    width: 48%;
+    float: left;
+    margin-right: 1rem;
+}
+.mobile .right{
+    width: 48%;
+    float: right;
+    margin-top: 10rem;
+    text-align: center; 
+    margin-right: 1rem;
+}
+.mobile .right h1{
+    font-size: 3rem;
+    margin-bottom: 1rem; 
+}
+.mobile .right p{
+    font-size: 1.5rem;
+}
+
+/* footer styling  */
+.footer {
+	max-width: 70%;
+	margin: 1rem auto;
+	overflow: auto;
+}
+
+.footer,
+.footer a {
+	color: #999;
+	font-size: 0.9rem;
+}
+
+.footer p {
+	margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.footer li {
+	line-height: 1.9;
+}
+
+
+
+/* media query  */
+@media (max-width: 960px) {
+
+    .showcase {
+    height: 70vh;
+}
+
+
+
+.showcase-content h1 {
+    font-size: 3.7rem;
+    line-height: 1;
+}
+
+.showcase-content p {
+    font-size: 1.5rem;
+}
+
+.footer .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.btn-xl {
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+    text-transform: uppercase;
+}
+.tv .left, .tv.right{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+ .tv .right img{
+    display: none;
+}
+.tv{
+    min-height: 20vh;
+   
+}
+.tv .left{
+    margin-top: 2rem;
+
+}
+
+.mobile .left{
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile .right{
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+}
+
+@media (max-width: 700px) {
+
+
+.showcase-content h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.showcase-content p {
+    font-size: 1rem;
+}
+
+.btn-xl {
+    font-size: 1rem;
+    padding: 1.2rem 1.6rem;
+    text-transform: uppercase;
+}
+}
+
+@media(max-height: 600px) {
+.showcase-content {
+margin-top: 3rem;
+}
+.tv{
+    margin-top: 3rem;
+}
+.tv.left h1{
+    font-size: 2rem;
+}
+.mobile .right h1{
+    font-size: 2rem;
+    
+}
+
+
+}
+
